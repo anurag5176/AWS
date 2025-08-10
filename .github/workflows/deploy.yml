@@ -2,21 +2,21 @@ name: Deploy to EC2
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] # change if your branch is different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy via SSH
+      - name: Deploy via SSH to EC2
         uses: appleboy/ssh-action@master
         with:
           host: 3.109.58.202
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /var/www/portfolio
+            cd /var/www/portfolio || exit 1
             sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git fetch --all
             sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git reset --hard origin/main
             sudo chown -R nginx:nginx /var/www/portfolio

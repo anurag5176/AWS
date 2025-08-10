@@ -16,7 +16,8 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /var/www/portfolio || exit 1
-            sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git fetch --all
-            sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git reset --hard origin/main
-            sudo chown -R nginx:nginx /var/www/portfolio
+              sudo git config --global --add safe.directory /var/www/portfolio
+              cd /var/www/portfolio
+              sudo GIT_SSH_COMMAND="ssh -i /home/ec2-user/.ssh/deploy-key" git fetch --all
+              sudo GIT_SSH_COMMAND="ssh -i /home/ec2-user/.ssh/deploy-key" git reset --hard origin/main
+              sudo chown -R nginx:nginx /var/www/portfolio

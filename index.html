@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0B1F3F" />
+  <meta name="description" content="Portfolio — Your Name. Developer, Designer, Problem Solver." />
+  <title>Your Name — Portfolio</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Developer • Designer • Problem Solver" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Nav -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#top" aria-label="Home">YN<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+        <li><a class="btn btn--ghost" href="mailto:you@domain.com">Hire Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero container">
+      <div class="hero__content">
+        <p class="kicker reveal">Available for freelance & full-time</p>
+        <h1 class="hero__title reveal">
+          Hi, I’m <span class="grad">Your Name</span><br />
+          I build clean, scalable web experiences.
+        </h1>
+        <p class="hero__desc reveal">
+          Full-stack developer specializing in modern React/Next.js apps, API design, and elegant UI systems.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn--ghost" href="/YourName_CV.pdf">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <!-- Decorative, animated orbs -->
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+
+        <!-- Avatar substitute (replace with an <img src="assets/me.jpg" alt="Your Name"> if you have one) -->
+        <div class="avatar reveal" role="img" aria-label="Portrait — Your Name">
+          <span>YN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <div class="section__head reveal">
+        <h2>About</h2>
+        <p>Crafting robust systems with a design-first mindset.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="card reveal">
+          <h3>Who I am</h3>
+          <p>
+            I’m a developer who blends product thinking with engineering. I care about performance,
+            accessibility, and maintainability. I turn ambiguous ideas into shipped features.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>What I do</h3>
+          <ul class="checklist">
+            <li>Design & build responsive UI with React/Next.js</li>
+            <li>API & backend integration (Node/Express)</li>
+            <li>Automation & CI/CD on AWS</li>
+            <li>Performance tuning & a11y</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <div class="section__head reveal">
+        <h2>Skills</h2>
+        <p>Tech I use daily.</p>
+      </div>
+
+      <div class="pill-list reveal">
+        <span class="pill">HTML5</span>
+        <span class="pill">CSS3</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">TypeScript</span>
+        <span class="pill">React</span>
+        <span class="pill">Next.js</span>
+        <span class="pill">Node.js</span>
+        <span class="pill">GitHub Actions</span>
+        <span class="pill">AWS S3/CloudFront</span>
+        <span class="pill">Tailwind (optional)</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <div class="section__head reveal">
+        <h2>Projects</h2>
+        <p>A few things I’ve built recently.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card -->
+        <article class="project-card reveal">
+          <div class="project-card__media">
+            <!-- Replace with your screenshot -->
+            <div class="thumb"></div>
+          </div>
+          <div class="project-card__body">
+            <h3>Project One</h3>
+            <p>
+              High-performance landing page with semantic HTML, lazy media, and dynamic theming.
+            </p>
+            <div class="project-card__tags">
+              <span>Next.js</span><span>SSR</span><span>SEO</span>
+            </div>
+            <div class="project-card__links">
+              <a class="btn btn--tiny" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--tiny btn--ghost" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__media"><div class="thumb"></div></div>
+          <div class="project-card__body">
+            <h3>Project Two</h3>
+            <p>Full-stack CRUD app with auth, API routes, and CI/CD to AWS.</p>
+            <div class="project-card__tags">
+              <span>React</span><span>Node</span><span>AWS</span>
+            </div>
+            <div class="project-card__links">
+              <a class="btn btn--tiny" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--tiny btn--ghost" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__media"><div class="thumb"></div></div>
+          <div class="project-card__body">
+            <h3>Project Three</h3>
+            <p>Design system starter with tokens, components, and utilities.</p>
+            <div class="project-card__tags">
+              <span>Design</span><span>System</span><span>DX</span>
+            </div>
+            <div class="project-card__links">
+              <a class="btn btn--tiny" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--tiny btn--ghost" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <div class="cta reveal">
+        <h2>Let’s build something great</h2>
+        <p>Based in Pune • Available remotely • Open to full-time & freelance</p>
+        <div class="cta__actions">
+          <a class="btn" href="mailto:you@domain.com">you@domain.com</a>
+          <a class="btn btn--ghost" href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

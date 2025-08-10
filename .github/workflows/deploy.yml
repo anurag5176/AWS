@@ -17,6 +17,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/portfolio
-            sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git reset --hard
-            sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git pull origin main
+            sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git fetch --all
+            sudo GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy-key" git reset --hard origin/main
             sudo chown -R nginx:nginx /var/www/portfolio
